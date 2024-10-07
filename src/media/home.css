@@ -1,0 +1,23 @@
+@media (max-width: 700px) {
+  .Main {
+    /* background-color: blue; */
+    flex-direction: column-reverse;
+    /* gap: 6rem; */
+    /* justify-content: ; */
+  }
+
+  .MainLeft {
+    width: 100%;
+  }
+
+  .MainLeft p h2 {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0 6vw;
+    text-align: left;
+  }
+  .Main img {
+    margin-top: 50vmax;
+  }
+}

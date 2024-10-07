@@ -1,0 +1,16 @@
+@media (max-width: 700px) {
+  #contact {
+    margin-top: 20vw;
+    height: 138vh;
+  }
+  .ContactContainer {
+    flex-direction: column;
+    gap: 10vw;
+    /* align-items: center;
+    justify-content: start; */
+  }
+
+  .ContactContainer form {
+    width: 100%;
+  }
+}
