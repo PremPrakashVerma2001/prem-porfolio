@@ -12,11 +12,11 @@ function Home() {
     <>
       <main
         id="home"
-        className=" Main flex justify-between items-center h-[110vh] {border-[3px] border-white} {w-[90%] m-auto} "
+        className=" Main flex flex-wrap-reverse justify-around items-center {h-[110vh] } {border-[3px] border-white} w-full m-auto p-8 "
       >
-        <div className=" MainLeft {border-[3px] border-green-300} w-[50%] h-[100%]">
+        <div className=" MainLeft {border-[3px] border-green-300} w-[50%] {h-[100%]}">
           <div className="Heading">
-            <h1 className="text-[3.5vw] mt-32 ml-12 flex gap-2">
+            <h1 className="text-[3.5vw] mt-16 ml-12 flex gap-2">
               Moshi Moshi{" "}
               <p className="animate-waving-hand origin-[75%_75%] text-[3.5vw]">
                 👋
@@ -38,36 +38,29 @@ function Home() {
             day.
           </p>
 
-          <div className="{border-[3px] border-green-300} mt-8 flex justify-evenly">
-            <button className="border-y-[2px] border-b-blue-500 border-t-yellow-600 p-[.8vw] rounded-2xl text-white text-[1.5vw] hover:shadow-md hover:shadow-blue-500 ">
+          <div className="{border-[3px] border-green-300} mt-8 flex flex-wrap justify-evenly items-center gap-2">
+            <button className="border-y-[2px] border-b-blue-500 border-t-yellow-600 p-[.8vw] rounded-2xl text-white text-[1.5vw] hover:shadow-md hover:shadow-blue-500 active:scale-90">
               <a href="#about">
                 Explore <span>➡️</span>
               </a>
             </button>
             <button
               onClick={openResume}
-              className="border-y-[2px] border-b-yellow-600 border-t-blue-500 p-[.8vw] rounded-2xl text-white text-[1.5vw] hover:shadow-b"
+              className="border-y-[2px] border-b-yellow-600 border-t-blue-500 p-[.8vw] rounded-2xl text-white text-[1.5vw] hover:shadow-b active:scale-90"
             >
               Resume 📄
             </button>
           </div>
         </div>
-        {/* <div className="{border-[3px] border-red-300 } w-[50%] h-[100%] grid items-center ">
+        {/* <div className="{border-[3px] border-red-300 } {w-[50%] }{h-[100%]} flex justify-center items-center  "> */}
+        <div className="ImgContainer {border-[3px] border-red-300} w-[50%] {h-[100%]}">
           <img
-            className="h-[25em] border-b-[3px] border-b-yellow-600 border-t-[3px] border-t-blue-400 rounded-[50%] mx-auto my-0 "
+            className=" w-[400px] h-[400px] border-b-[3px] border-b-yellow-600 border-t-[3px] border-t-blue-400 rounded-[50%] mx-auto my-0 "
             src={mainImg2}
             alt="main-image"
           />
-        </div> */}
-        <div className="{border-[3px] border-red-300 } w-[50%] h-[100%] flex justify-center items-center  ">
-          <div className="w-[55%] h-[55%]">
-            <img
-              className="object-cover border-b-[3px] border-b-yellow-600 border-t-[3px] border-t-blue-400 rounded-[50%] mx-auto my-0 "
-              src={mainImg2}
-              alt="main-image"
-            />
-          </div>
         </div>
+        {/* </div> */}
       </main>
     </>
   );

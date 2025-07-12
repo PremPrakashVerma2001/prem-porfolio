@@ -4,10 +4,10 @@ import "../media/navbar.css";
 
 function Navbar() {
   return (
-    <nav className=" NavBar flex justify-between items-center h-[10vh] w-full z-[100000] font-extrabold {bg-[#353535]} fixed top-2 rounded-b-lg">
-      <div className=" flex w-1/2 h-full justify-start items-center gap-4 ml-[6vw]">
+    <nav className=" NavBar flex flex-wrap gap-2 justify-between items-center w-full z-[100000] font-extrabold {bg-[#353535]} {fixed top-2} rounded-b-lg">
+      <div className="logoContainer flex w-1/2 h-full justify-start items-center gap-4 ml-[2rem] ">
         <img
-          className="w-[5vmax] h-[5vmax] rounded-[50%]"
+          className="w-[4rem] h-[4rem] rounded-[50%] p-1"
           src={img1}
           alt="logo"
         />

@@ -4,20 +4,48 @@
     flex-direction: column-reverse;
     /* gap: 6rem; */
     /* justify-content: ; */
+    /* width: 100%; */
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #home {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
-  .MainLeft {
-    width: 100%;
-  }
-
-  .MainLeft p h2 {
+  /* .MainLeft {
     width: 100%;
     margin-left: 0px;
     margin-top: 0px;
-    padding: 0 6vw;
-    text-align: left;
+  } */
+  .Heading > h1 {
+    /* margin-top: 2rem; */
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 2rem;
+    padding: 0 2vw;
+    text-align: justify;
   }
-  .Main img {
-    margin-top: 50vmax;
+
+  .MainLeft > p {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0 2vw;
+    text-align: justify;
+  }
+  .MainLeft > h2 {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding: 0 2vw;
+    text-align: justify;
+  }
+
+  .ImgContainer > img {
+    /* height: 1rem;
+    width: 1rem; */
+    width: 150px;
+    height: 150px;
   }
 }

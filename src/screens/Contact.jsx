@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../media/contact.css";
 
 const Contact = () => {
+  const [form, setForm] = useState({ fullName: "", email: "", message: "" });
+  const handleOnClick = (e) => {
+    // alert("Are you sure you want to send this mail?");
+    e.stopPropagation();
+    // console.log(form);
+
+    setTimeout(() => {
+      alert("Your Message is Successfully Received✔️");
+    }, 1000);
+
+    setForm({ fullName: "", email: "", message: "" });
+  };
   return (
     <section
       id="contact"
@@ -21,15 +33,18 @@ const Contact = () => {
       </div>
       <div className="ContactContainer {border-[3px] border-fuchsia-400} w-[90%]  flex ">
         {/* <div className=" FormContainer w-[100%] border-2"> */}
-        <form className=" w-[60%] flex flex-col gap-4" autoComplete="off">
+        <form className=" w-[60%] flex flex-col gap-4 " autoComplete="off">
           <div>
             {/* <label htmlFor="fullName">Name</label> */}
             <input
               className=" w-[80%] bg-transparent outline-none border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-500 rounded-2xl placeholder:text-sm font-extrabold p-[1vw] focus:border-b-yellow-600 "
               type="text"
               name="fullName"
-              // value=""
+              value={form.fullName}
               placeholder="Full Name"
+              onChange={(e) => {
+                setForm({ ...form, fullName: e.target.value });
+              }}
               // required
               // size="20"
               maxLength={15}
@@ -43,8 +58,11 @@ const Contact = () => {
               className=" w-[80%] bg-transparent outline-none border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-500 rounded-2xl placeholder:text-sm font-extrabold p-[1vw] focus:border-b-yellow-600  "
               type="email"
               name="email"
-              // value=""
-              placeholder="abc@domain.com"
+              value={form.email}
+              placeholder="xyz@gmail.com"
+              onChange={(e) => {
+                setForm({ ...form, email: e.target.value });
+              }}
               // required
               // size="20"
               maxLength={15}
@@ -57,6 +75,10 @@ const Contact = () => {
             <textarea
               className=" w-[80%] bg-transparent outline-none border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-600 rounded-2xl placeholder:text-sm font-extrabold p-[1vw] focus:border-b-yellow-600 "
               name="message"
+              value={form.message}
+              onChange={(e) => {
+                setForm({ ...form, message: e.target.value });
+              }}
               rows={4}
               cols={30}
               placeholder="Write your message..."
@@ -66,7 +88,7 @@ const Contact = () => {
               autoComplete="off"
             ></textarea>
           </div>
-          <div className=" w-[80%] mx-auto flex border-y-[2px] border-b-yellow-300 border-t-blue-500 p-2 rounded-2xl ">
+          {/* <div className=" w-[80%] mx-auto flex border-y-[2px] border-b-yellow-300 border-t-blue-500 p-2 rounded-2xl ">
             <label className=" text-white  cursor-pointer " htmlFor="myfile">
               🔗 Upload files
             </label>
@@ -78,7 +100,7 @@ const Contact = () => {
               multiple
               // placeholder="Attach document"
             />
-          </div>
+          </div> */}
           <div className="flex justify-evenly">
             {/* <button className="border-y-[2px] border-b-yellow-300 border-t-blue-500 p-2 rounded-2xl text-white text-xl text-md hover:shadow-blue-500">
                 <label className="cursor-pointer " htmlFor="reset">
@@ -91,9 +113,12 @@ const Contact = () => {
                   id="reset"
                 />
               </button> */}
-            <button className="border-y-[2px] border-b-yellow-300 border-t-blue-500 p-[.7vw] rounded-2xl text-white text-[1.5vw] hover:shadow-b">
+            <div
+              onClick={handleOnClick}
+              className="border-y-[2px] border-b-yellow-300 border-t-blue-500 p-[.7vw] rounded-2xl text-white text-[1.5vw] hover:shadow-b cursor-pointer"
+            >
               Send ➤
-            </button>
+            </div>
           </div>
         </form>
         {/* </div> */}

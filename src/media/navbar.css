@@ -6,11 +6,13 @@
     /* justify-content: ; */
   }
   .NavBar {
-    flex-direction: column;
-    justify-content: space-between;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    /* align-items: baseline; */
   }
   .MenuContainer {
-    margin-right: 4vw;
+    /* margin-right: 4vw; */
     /* margin: 0 0; */
     /* background-color: wheat; */
     /* position: absolute; */
