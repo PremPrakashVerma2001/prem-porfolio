@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+  #project {
+    height: auto !important;
+    padding: 2rem !important;
+  }
+  /* ...existing code... */
+}

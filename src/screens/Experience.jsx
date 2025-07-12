@@ -6,7 +6,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="h-[100vh] {border-[2px]  bg-gray-800/70} flex flex-col justify-evenly  items-center"
+      className="h-[100vh] border-[2px]  bg-gray-800/70 flex flex-col justify-evenly  items-center"
     >
       <div className="flex flex-wrap justify-center items-center gap-1">
         <img
@@ -19,7 +19,7 @@ function Experience() {
           EXPER<span className="text-blue-500">IENCE</span>
         </h1>
       </div>
-      <div className="p-[2vw] border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-500 rounded-2xl w-[60%] mx-auto  shadow-t hover:shadow-b">
+      <div className="p-4 border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-500 rounded-2xl w-[60%] mx-auto  shadow-t hover:shadow-b">
         <div>
           <div className=" Heading flex justify-between items-center p-[1.1vw]">
             <div className="  flex gap-2 items-center">

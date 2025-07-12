@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Project from "../screens/Project";
 import ProjectSliderImgs from "../utils/ProjectSliderImg.js";
 
+import "../media/projects.css";
+
 const lastIdx = ProjectSliderImgs.length - 1;
 
 function Slider() {
@@ -16,10 +18,10 @@ function Slider() {
   }, [activeIdx]);
 
   return (
-    <div className="relative {border-[2px]} w-[90%] h-[80vh] flex flex-col gap-2 justify-center items-center ">
+    <div className=" slider-container relative border-[2px] w-[90%] h-[80vh] flex justify-center items-center ">
       {/* Project Card  */}
 
-      <div className=" py-[1vw] w-[50%] h-[65vh] {border-[3px]  border-green-500 } flex flex-col  gap-4 justify-between border-b-[2px] border-t-[2px] border-solid border-b-yellow-600 border-t-blue-600 rounded-2xl transition-all duration-2000 ease-in-out   shadow-b hover:shadow-t ">
+      <div className=" slider-cards py-[1vw] w-[50vw] h-[65vh] border-[3px]  border-green-500  flex flex-col  gap-4 justify-between border-b-[2px] border-t-[2px] border-solid border-b-yellow-600 border-t-blue-600 rounded-2xl transition-all duration-2000 ease-in-out   shadow-b hover:shadow-t ">
         <div>
           {ProjectSliderImgs.map((item, idx) => {
             return (
@@ -40,7 +42,7 @@ function Slider() {
                     srcSet=""
                   />
                 </div>
-                <div className="{border-[2px] }w-[100%] h-[13em] text-xs text-justify text-white p-[1.1vw] overflow-hidden">
+                <div className="{border-[2px] } w-[100%] h-[13em] text-xs text-justify text-white p-[1.1vw] overflow-hidden">
                   <p className="text-blue-500 mb-2 font-extrabold">
                     Project Description{" "}
                     <span className="text-yellow-400">:</span>
@@ -60,27 +62,29 @@ function Slider() {
           })}
         </div>
         {/* Dots */}
-        <div className="  {border-[2px]} flex gap-4 justify-center items-center">
+        <div className="   {border-[2px]} flex gap-4 justify-center items-center">
           {ProjectSliderImgs.map((slide, idx) => (
             <div
               //   className= {activeIdx===idx ? "w-[2em] h-[2em] bg-white " : "w-[2em] h-[2em] bg-black"}
               key={idx}
-              className={`w-[1.3em] h-[1.3em] border-[3px] border-b-blue-500 border-t-yellow-400  rounded-[50%]  ${
+              className={` slider-btn w-[1.3em] h-[1.3em] border-[3px] border-b-blue-500 border-t-yellow-400  rounded-[50%]  ${
                 activeIdx === idx ? "bg-yellow-600" : ""
               }`}
               // onClick={(idx) => {
               //   //   e.StopPropagation();
               //   setActiveIdx(idx);
               // }}
+              onClick={() => setActiveIdx(idx)}
+              style={{ cursor: "pointer" }}
             ></div>
           ))}
         </div>
       </div>
 
       {/* Arrow Buttons */}
-      <div className=" absolute z-[1000] {border-[3px] } w-[70%]  text-[3vw] flex justify-between items-center">
+      <div className=" slider-btns absolute z-[1000] {border-[3px] } w-[70%]  text-[3vmax] flex justify-between items-center">
         <button
-          className=" w-[1.5em] h-[1.5em] rounded-md border-gray-500 hover:shadow-inner hover:shadow-yellow-200"
+          className=" slider-btn w-[1.5em] h-[1.5em] rounded-md border-gray-500 hover:shadow-inner hover:shadow-yellow-200"
           onClick={() =>
             setActiveIdx(activeIdx === 0 ? lastIdx : activeIdx - 1)
           }
@@ -88,7 +92,7 @@ function Slider() {
           ◀️
         </button>
         <button
-          className="w-[1.5em] h-[1.5em] rounded-md border-gray-500 hover:shadow-inner hover:shadow-yellow-200"
+          className=" slider-btn w-[1.5em] h-[1.5em] rounded-md border-gray-500 hover:shadow-inner hover:shadow-yellow-200"
           onClick={() =>
             setActiveIdx(activeIdx === lastIdx ? 0 : activeIdx + 1)
           }
