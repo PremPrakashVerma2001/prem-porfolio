@@ -18,10 +18,10 @@ function Slider() {
   }, [activeIdx]);
 
   return (
-    <div className=" slider-container relative border-[2px] w-[90%] h-[80vh] flex justify-center items-center ">
+    <div className=" slider-container relative{ border-[2px]} w-[90%] h-[80vh] flex justify-center items-center ">
       {/* Project Card  */}
 
-      <div className=" slider-cards py-[1vw] w-[50vw] h-[65vh] border-[3px]  border-green-500  flex flex-col  gap-4 justify-between border-b-[2px] border-t-[2px] border-solid border-b-yellow-600 border-t-blue-600 rounded-2xl transition-all duration-2000 ease-in-out   shadow-b hover:shadow-t ">
+      <div className=" slider-cards  w-6/12  p-3  {border-green-500} flex flex-col  gap-4 justify-between border-b-[2px] border-t-[2px] border-solid border-b-yellow-600 border-t-blue-600 rounded-2xl transition-all duration-2000 ease-in-out  shadow-b hover:shadow-t ">
         <div>
           {ProjectSliderImgs.map((item, idx) => {
             return (
@@ -31,23 +31,23 @@ function Slider() {
                   activeIdx === idx ? " inline-block " : " hidden  "
                 }`}
               >
-                <h1 className="text-[2.2vw] text-center font-semibold">
+                <h1 className="text-[2.2vmax] text-center font-semibold">
                   {item.title}
                 </h1>
-                <div className="">
+                <div className="flex justify-center items-center">
                   <img
-                    className=" mx-auto w-[23em] h-[10em] rounded-2xl object-fill "
+                    className="w-9/12 h-60 rounded-lg "
                     src={item.img}
                     alt={item.alt}
                     srcSet=""
                   />
                 </div>
-                <div className="{border-[2px] } w-[100%] h-[13em] text-xs text-justify text-white p-[1.1vw] overflow-hidden">
-                  <p className="text-blue-500 mb-2 font-extrabold">
+                <div className="{border-[2px] } w-[100%]  text-xs text-justify text-white  overflow-hidden">
+                  <h4 className="text-blue-500 py-4 font-extrabold text-[1.2vmax]">
                     Project Description{" "}
                     <span className="text-yellow-400">:</span>
-                  </p>
-                  <p className="">{item.desc}</p>
+                  </h4>
+                  <p className="text-sm">{item.desc}</p>
                 </div>
                 {/* <div className="flex justify-evenly items-center">
                   <button className="border-y-[2px] border-b-blue-500 border-t-yellow-600 rounded-2xl p-2 text-white text-md ">
@@ -84,7 +84,7 @@ function Slider() {
       {/* Arrow Buttons */}
       <div className=" slider-btns absolute z-[1000] {border-[3px] } w-[70%]  text-[3vmax] flex justify-between items-center">
         <button
-          className=" slider-btn w-[1.5em] h-[1.5em] rounded-md border-gray-500 hover:shadow-inner hover:shadow-yellow-200"
+          className=" slider-btn w-[1.5em] h-[1.5em] rounded-md border-gray-500 hover:shadow-inner "
           onClick={() =>
             setActiveIdx(activeIdx === 0 ? lastIdx : activeIdx - 1)
           }
@@ -92,7 +92,7 @@ function Slider() {
           ◀️
         </button>
         <button
-          className=" slider-btn w-[1.5em] h-[1.5em] rounded-md border-gray-500 hover:shadow-inner hover:shadow-yellow-200"
+          className=" slider-btn w-[1.5em] h-[1.5em] rounded-md border-gray-500 hover:shadow-inner"
           onClick={() =>
             setActiveIdx(activeIdx === lastIdx ? 0 : activeIdx + 1)
           }

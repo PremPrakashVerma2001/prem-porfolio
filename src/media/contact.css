@@ -1,16 +1,29 @@
 @media (max-width: 700px) {
   #contact {
-    margin-top: 20vw;
-    height: 138vh;
+    height: auto !important;
+    padding: 2rem !important;
   }
   .ContactContainer {
+    width: 100% !important;
+    padding: 1rem !important;
+    margin-left: 0px;
+    margin-top: 0px;
+    display: flex;
     flex-direction: column;
-    gap: 10vw;
-    /* align-items: center;
-    justify-content: start; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
-  .ContactContainer form {
-    width: 100%;
+  .ContactContainer > form {
+    width: 100% !important;
+    padding: 1rem !important;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .MapContainer {
+    width: 100% !important;
+    padding: 1rem !important;
   }
 }

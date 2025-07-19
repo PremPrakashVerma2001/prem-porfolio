@@ -18,26 +18,26 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="{border-[3px]} h-[100vh] text-center flex flex-col gap-12 justify-center items-center"
+      className="{border-[3px]} h-[100vh] text-center flex flex-col flex-wrap  justify-center items-center p-8"
     >
-      <div className="flex flex-wrap justify-center items-center mt-4 gap-1">
+      <div className="flex flex-wrap justify-center items-center gap-1 mb-6">
         <img
-          className="w-[3.8vw] h-[3.8vw] rounded-[50%]"
+          className="w-[4vmax] h-[4vmax] rounded-[50%]"
           src="https://img.icons8.com/?size=100&id=91299&format=png&color=000000"
           alt="skill_img"
           loading="lazy"
         />
-        <h1 className="text-[2.1vw] flex gap-2">
+        <h1 className="text-[2.1vmax] ">
           GET IN <span className="text-blue-500">TOUCH</span>
         </h1>
       </div>
-      <div className="ContactContainer {border-[3px] border-fuchsia-400} w-[90%]  flex ">
+      <div className=" ContactContainer {border-[3px] border-fuchsia-400} w-full  flex flex-wrap  justify-center items-center p-8 ">
         {/* <div className=" FormContainer w-[100%] border-2"> */}
-        <form className=" w-[60%] flex flex-col gap-4 " autoComplete="off">
+        <form className=" w-4/6 flex flex-col gap-4 p-6 " autoComplete="off">
           <div>
             {/* <label htmlFor="fullName">Name</label> */}
             <input
-              className=" w-[80%] bg-transparent outline-none border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-500 rounded-2xl placeholder:text-sm font-extrabold p-[1vw] focus:border-b-yellow-600 "
+              className=" w-[90%] bg-transparent outline-none border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-500 rounded-2xl placeholder:text-sm font-extrabold p-2 focus:border-b-yellow-600 "
               type="text"
               name="fullName"
               value={form.fullName}
@@ -55,7 +55,7 @@ const Contact = () => {
           <div>
             {/* <lable>Email</lable> */}
             <input
-              className=" w-[80%] bg-transparent outline-none border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-500 rounded-2xl placeholder:text-sm font-extrabold p-[1vw] focus:border-b-yellow-600  "
+              className=" w-[90%] bg-transparent outline-none border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-500 rounded-2xl placeholder:text-sm font-extrabold p-2 focus:border-b-yellow-600  "
               type="email"
               name="email"
               value={form.email}
@@ -73,7 +73,7 @@ const Contact = () => {
           <div>
             {/* <label>Message</label> */}
             <textarea
-              className=" w-[80%] bg-transparent outline-none border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-600 rounded-2xl placeholder:text-sm font-extrabold p-[1vw] focus:border-b-yellow-600 "
+              className=" w-[90%] bg-transparent outline-none border-b-[2px] border-b-yellow-300 border-t-[2px] border-t-blue-600 rounded-2xl placeholder:text-sm font-extrabold p-2 focus:border-b-yellow-600 "
               name="message"
               value={form.message}
               onChange={(e) => {
@@ -115,26 +115,28 @@ const Contact = () => {
               </button> */}
             <div
               onClick={handleOnClick}
-              className="border-y-[2px] border-b-yellow-300 border-t-blue-500 p-[.7vw] rounded-2xl text-white text-[1.5vw] hover:shadow-b cursor-pointer"
+              className="border-y-[2px] border-b-yellow-600 border-t-blue-500 p-4 rounded-2xl text-white text-[1.5vmax] hover:shadow-b active:scale-90 cursor-pointer "
             >
               Send ➤
             </div>
           </div>
         </form>
-        {/* </div> */}
-        <div className="w-[50%] text-center mx-auto">
+        {/* Map Div */}
+        <div className=" MapContainer w-2/6 text-center m-auto p-6 ">
           <div className=" flex flex-col  gap-4 ">
             <iframe
-              className=" w-[100%] h-[13em] border-y-[2px] border-b-yellow-300 border-t-blue-500 rounded-3xl shadow-xl shadow-yellow-500/20"
+              className="h-[13em] border-y-[2px] border-b-yellow-300 border-t-blue-500 rounded-3xl shadow-xl shadow-yellow-500/20"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55967.195221496244!2d77.15508006702358!3d28.75091867727053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01d4f896099f%3A0xd856071fa2f0c441!2sBurari%2C%20Delhi%2C%20110084!5e0!3m2!1sen!2sin!4v1727628113308!5m2!1sen!2sin"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             <p> ⚲ Burari, Delhi-110084</p>
-          </div>
-          <div className="mt-4">
-            <code> 🖂 ppverma.verma12@gmail.com</code>
+            <div className="">
+              <code>
+                <a href="mailto:ppverma.verma12@gmail.com">🖂 Gmail</a>
+              </code>
+            </div>
           </div>
         </div>
       </div>
